@@ -6,9 +6,6 @@
 int main(int argc,char** argv)
 {
 	struct winsize argp;
-	argp.ws_row=40;
-	argp.ws_col=164;
-
 	if(ioctl(0,TIOCGWINSZ,&argp)==0)
 	{
 		printf("Terminal lenght is %d\n",argp.ws_row);
